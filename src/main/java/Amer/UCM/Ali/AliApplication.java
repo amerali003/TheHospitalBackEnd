@@ -16,11 +16,13 @@ public class AliApplication {
 	@Autowired
 	private PatientRepo patientRepo;
 
+
 	@PostMapping("/AddPatient")
 	public Patient AddPatient(@RequestBody  Patient patient) {
 
 		return patientRepo.save(patient);
 	}
+
 
 
 	@GetMapping("/GetAllPatients")
@@ -39,5 +41,8 @@ public class AliApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(AliApplication.class, args);
 	}
+
+
+
 
 }
