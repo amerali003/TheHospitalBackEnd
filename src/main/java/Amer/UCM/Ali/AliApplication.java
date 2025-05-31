@@ -15,20 +15,18 @@ import java.util.Optional;
 public class AliApplication {
 	@Autowired
 	private PatientRepo patientRepo;
-
-
 	@PostMapping("/AddPatient")
 	public Patient AddPatient(@RequestBody  Patient patient) {
 
 		return patientRepo.save(patient);
 	}
 
-
-
 	@GetMapping("/GetAllPatients")
 	public List<Patient> GetAllPatients() {
 		return patientRepo.findAll();
 	}
+
+
 
 
 	@GetMapping("/GetPatientByID/{id}")
@@ -41,8 +39,6 @@ public class AliApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(AliApplication.class, args);
 	}
-
-
 
 
 }
