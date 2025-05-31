@@ -15,6 +15,11 @@ import java.util.Optional;
 public class AliApplication {
 	@Autowired
 	private PatientRepo patientRepo;
+	@Autowired
+	private AppointmentRepo appointmentRepo;
+	@Autowired
+	private DoctorRepo doctorRepo;
+
 	@PostMapping("/AddPatient")
 	public Patient AddPatient(@RequestBody  Patient patient) {
 
@@ -33,6 +38,30 @@ public class AliApplication {
  public Patient GetPatientByID(@PathVariable int id) {
 		Optional<Patient> patient = patientRepo.findById(id);
 		return patient.orElse(null);
+	}
+
+
+	@PostMapping("/AddAppointment")
+	public Appointment AddAppointment(@RequestBody Appointment appointment) {
+		return this.appointmentRepo.save(appointment);
+	}
+	@GetMapping("/GetAllAppointments")
+	public List<Appointment> GetAllAppointments() {
+		return appointmentRepo.findAll();
+	}
+
+
+	@PostMapping("/AddDoctor")
+	public Doctor AddDoctor(@RequestBody Doctor doctor) {
+		return this.doctorRepo.save(doctor);
+	}
+
+
+
+
+	@GetMapping("/GetAllDoctors")
+	public List<Doctor> GetAllDoctors() {
+		return doctorRepo.findAll();
 	}
 
 
