@@ -10,15 +10,15 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Doctor {
+public class Item {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+
     private int id;
-    private String doctorName;
-    private int age;
-    private String gender;
-    private String mainMajorName;
-    private String subMajorName;
-    private String emergencyPhone;
+    private String itemName;
+    private String itemPrice;
+    private String itemUOM;
+    private String itemCategory;
+    private String itemStatus;
 
 }

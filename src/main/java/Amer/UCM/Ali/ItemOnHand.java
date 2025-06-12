@@ -1,5 +1,4 @@
 package Amer.UCM.Ali;
-
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -10,15 +9,15 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Appointment {
+public class ItemOnHand {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
 
     private int id;
-    private String patientId;
-    private String doctorName;
-    private String appointmentDate;
-    private String appointmentTime;
-    private String location;
+    private String itemName;
+    private String itemPrice;
+    private String itemUOM;
+    private int    theItemOnhand ;
+    private String storeName;
 
 }

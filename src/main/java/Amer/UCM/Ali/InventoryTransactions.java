@@ -1,4 +1,3 @@
-
 package Amer.UCM.Ali;
 
 import jakarta.persistence.*;
@@ -11,16 +10,14 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Patient {
+public class InventoryTransactions {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
 
     private int id;
-    private String name;
-    private int age;
-    private String gender;
-    private String address;
-    private String phone;
-    private String email;
-
+    private String   transactionName ;
+    private String   storeName ;
+    private String   itemName;
+    private String   itemUOM;
+    private String   quantity;
 }
