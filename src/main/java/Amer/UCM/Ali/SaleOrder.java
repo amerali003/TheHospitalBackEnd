@@ -20,4 +20,5 @@ public class SaleOrder {
     private String   itemName;
     private String   customerName ;
     private int      quantity;
+    private String salePrice     ;
 }

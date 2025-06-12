@@ -29,7 +29,8 @@ public class AliApplication {
 	@Autowired
 	private ItemOnHandRepo    itemOnHandRepo;
 
-
+	@Autowired
+	private SaleOrderRepo    saleOrderRepo;
 
 
 /*  items */
@@ -142,7 +143,29 @@ public class AliApplication {
 		return itemOnHandRepo.getSumOfItemOnHand(itemName, storeName);
 	}
 
-	//----------- item onhand-----------------
+	//----------- Sale order-----------------
+
+	/*  items */
+
+	@PostMapping("/AddSaleOrder")
+	public SaleOrder AddSaleOrder(@RequestBody SaleOrder saleOrder) {
+
+		return saleOrderRepo.save(saleOrder);
+	}
+
+	@GetMapping("/GetAllSaleOrders")
+	public List<SaleOrder> GetAllSaleOrders() {
+		return saleOrderRepo.findAll();
+	}
+
+
+	@GetMapping("/GetSaleOrderyID/{id}")
+	public SaleOrder GetSaleOrderyID(@PathVariable int id) {
+		Optional<SaleOrder> saleOrder = saleOrderRepo.findById(id);
+		return saleOrder.orElse(null);
+	}
+	//-----------End of items------------------
+
 
 	public static void main(String[] args) {
 		SpringApplication.run(AliApplication.class, args);
