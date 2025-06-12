@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy JAR app to Azure Web App - TheBackEndApp002
+name: Build and deploy JAR app to Azure Web App - TheBackendAPPWeb
 
 on:
   push:
@@ -52,21 +52,15 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-<<<<<<< HEAD
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_3E48123550AC44B383B0E36F5618CE7B }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_65C66AD37B0C4E068395CA25AE573B48 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_AE1E46C57DCE4943B9B08BB7A924D3A7 }}
-=======
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_B58B94C0B8C54B93B027C2112C938E1B }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_0CB10BABC06D4ABDBF602132CEE0CDBF }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_A4C1C3C0E314439DA43286E0FBEFF3BA }}
->>>>>>> 6970fcaa8fab838f33e3dca1747d7d7c815bdd12
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_733086C224EC4F6DA21DCC6CD1E40C76 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_11A3D7F8547A4835AB3B0CB326F45052 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_9A72BD40666246C9BF49E2AEF3ED5466 }}
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
         with:
-          app-name: 'TheBackEndApp002'
+          app-name: 'TheBackendAPPWeb'
           slot-name: 'Production'
           package: '*.jar'
           
