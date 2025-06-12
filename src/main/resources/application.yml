@@ -1,10 +1,7 @@
 spring:
   datasource:
-<<<<<<< HEAD
+
     url: jdbc:sqlserver://quick-server.database.windows.net:1433;database=quick-database;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;
-=======
-    url: jdbc:sqlserver://ehr-server.database.windows.net:1433;database=ehr-database;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;
->>>>>>> 6970fcaa8fab838f33e3dca1747d7d7c815bdd12
     username: Amer
     password: Egypt25jan_123
   jpa:
