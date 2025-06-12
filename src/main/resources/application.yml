@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:sqlserver://ehr-server.database.windows.net:1433;database=EHR;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;
+    url: jdbc:sqlserver://ehr-server.database.windows.net:1433;database=ehr-database;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;
     username: Amer
     password: Egypt25jan_123
   jpa:
